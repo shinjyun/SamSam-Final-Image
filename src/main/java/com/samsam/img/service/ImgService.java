@@ -2,6 +2,9 @@ package com.samsam.img.service;
 
 import java.util.List;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import jakarta.inject.Inject;
@@ -20,9 +23,18 @@ public class ImgService {
 		return imgRepository.save(img);
 	}
 	
+	// 단순 이미지 전체조회
 	@Transactional(readOnly = true)
 	public List<Img> findAllImgs() {
 		return imgRepository.findAll();
+	}
+	
+	// 페이징 이미지 전체조회
+	@Transactional(readOnly = true)
+	public Page<Img> findAllImgs(int page, int size){
+		Pageable pageable = PageRequest.of(page, size);
+		
+		return imgRepository.findAll(pageable);
 	}
 	
 	@Transactional(readOnly = true)

@@ -11,6 +11,7 @@ import java.util.Date;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.springframework.data.domain.Page;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -50,12 +51,27 @@ public class ImgController {
 //    }
 	
 	// 이미지 목록 조회
+	/**
 	@GetMapping("/ImgSelect")
 	public String list(Model model) {
 		// 모든 이미지 목록을 모델에 추가
 		model.addAttribute("list", imgService.findAllImgs());
 		logger.info("list", model);
 		return "./img/img_select";
+	}
+	**/
+	
+	// 이미지 페이징 전체 조회
+	@GetMapping("/ImgSelect")
+	public String imgSelect(@RequestParam(name = "page", defaultValue = "1") int page, @RequestParam(name = "size", defaultValue = "5") int size, Model model) {
+		
+		Page<Img> imgPage = imgService.findAllImgs(page - 1, size);
+		
+		model.addAttribute("list", imgPage);
+		model.addAttribute("currentPage", page);
+		model.addAttribute("totalPages", imgPage.getTotalPages());
+		
+		return"./img/img_select"; 
 	}
 	
 	// 특정 이미지의 상세 정보를 조회

@@ -44,7 +44,7 @@
 									</tr>
 								</thead>
 								<tbody>
-									<c:forEach var="list" items="${list}">
+									<c:forEach var="list" items="${list.content}">
 										<tr class="text-center">
 											<td>${list.imgNumber}</td>
 											<td>${list.imgUpload.substring(0, 10)}</td>
@@ -65,6 +65,38 @@
 									</c:if>
 								</tbody>
 							</table>
+							
+							
+							<!-- 페이징 버튼 -->					
+							<nav aria-label="Page navigation">
+								<ul class="pagination justify-content-center">
+									<li class="page-item ${currentPage == 1 ? 'disabled' : ''}">
+										<c:if test="${currentPage > 1}">
+											<a class="page-link" href="/ImgSelect?page=${currentPage - 1}&size=${list.size}" aria-label="Previous">
+												<span aria-hidden="true">&laquo;</span>
+												<span class="sr-only">이전</span>
+											</a>
+										</c:if>
+									</li>
+					
+									<c:forEach begin="1" end="${totalPages}" var="i">
+										<li class="page-item ${currentPage == i ? 'active' : ''}">
+											<a class="page-link" href="/ImgSelect?page=${i}&size=${list.size}">${i}</a>
+										</li>
+									</c:forEach>
+					
+									<li class="page-item ${currentPage == totalPages ? 'disabled' : ''}">
+										<c:if test="${currentPage < totalPages}">
+											<a class="page-link" href="/ImgSelect?page=${currentPage + 1}&size=${list.size}" aria-label="Next">
+												<span aria-hidden="true">&raquo;</span>
+												<span class="sr-only">다음</span>
+											</a>
+										</c:if>
+									</li>
+								</ul>
+							</nav>
+							
+							
 							<div>
 								<a href="./ImgInsert" class="btn btn-success btn-block"> 이미지 등록 </a>
 							</div>
