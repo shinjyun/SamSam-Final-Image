@@ -24,7 +24,7 @@
 <br>
 
 ### 1. 이미지 목록 화면(ImgSelect)
-![이미지 목록 화면](https://github.com/shinjyun/SamSamImg-Final-CRUD/assets/147064251/ffe7f93b-6410-488b-ac06-79b87324e863)
+![이미지 목록 화면](https://github.com/shinjyun/SamSam-Final-Image/assets/147064251/3c65f69b-cd38-4699-bc2d-0d409bee428f)
 
 - 이미지 번호, 업로드 날짜, 수정 날짜, 미리 보기
 - 이미지 상세 보기 버튼을 통해 이미지 수정 및 삭제 가능
@@ -33,7 +33,7 @@
 <br>
 
 ### 2. 상세 이미지 정보(ImgSelectDetail)
-![상세 이미지 정보 화면](https://github.com/shinjyun/SamSamImg-Final-CRUD/assets/147064251/38fb26b5-1424-4a34-962a-1fdc408f7bd0)
+![상세 이미지 정보 화면](https://github.com/shinjyun/SamSam-Final-Image/assets/147064251/55ec8b69-884d-42e8-99ac-51284a4b4a8a)
 
 - 1개의 이미지의 상세 정보를 볼 수 있음
 - 이미지 목록으로 다시 돌아가거나 이미지 수정, 삭제를 할 수 있음
@@ -41,33 +41,33 @@
 <br>
 
 ### 3-1. 이미지 변경(ImgUpdate)
-![이미지 수정 화면](https://github.com/shinjyun/SamSamImg-Final-CRUD/assets/147064251/39f8447a-6d92-4f59-9aa5-d2055e8ecf7d)
+![이미지 수정 화면](https://github.com/shinjyun/SamSam-Final-Image/assets/147064251/7b118739-c24b-4537-9271-a768f77a5248)
 
 - 이미지 번호, 업로드 날짜, 수정 날짜를 불러올 수 있고 사용자가 수정할 수 없음
 - 이미지 확장자 파일만 업로드 가능하고, 미리보기 구현
 
 ### 3-2. 변경된 이미지 목록 화면
-![변경된 이미지 목록 화면](https://github.com/shinjyun/SamSamImg-Final-CRUD/assets/147064251/f8f3c062-e93b-489d-84db-bdf103dff1ea)
+![변경된 이미지 목록 화면](https://github.com/shinjyun/SamSam-Final-Image/assets/147064251/4dfbc174-5fc9-49ba-9f6c-16128a065897)
 
 - 최초 업로드 날짜와 수정해서 업로드한 날짜가 뜸
 - 변경된 이미지를 미리보기를 통해 확인 가능
 
 <br>
 
-### 4-1. 이미지 등록(ImgInsert)
-![이미지 등록 화면](https://github.com/shinjyun/SamSamImg-Final-CRUD/assets/147064251/50ec205e-587c-40e8-afd7-4732a065c4d7)
+### 4-1. 이미지 등록(ImgInsert
+![이미지 등록 화면](https://github.com/shinjyun/SamSam-Final-Image/assets/147064251/37be8870-c27d-40f0-8e6d-48724b3cc8fc)
 
 - 이미지 확장자 파일만 업로드 가능
 - 이미지의 이름과 미리보기가 뜸
 
 ### 4-2. 이미지 등록이 완료된 화면
-![이미지 등록 완료 화면](https://github.com/shinjyun/SamSamImg-Final-CRUD/assets/147064251/8c9745e4-570a-4cc2-b4d3-42a448df228a)
+![이미지 등록 완료 화면](https://github.com/shinjyun/SamSam-Final-Image/assets/147064251/7c9c72dc-1fbf-49fc-842a-65f212932f95)
 
 - 업로드 날짜, 수정 날짜를 확인하고 이미지 미리보기 구현
 
 <br>
 
 ### 5. 이미지 삭제(ImgDelete)
-![이미지 삭제 화면](https://github.com/shinjyun/SamSamImg-Final-CRUD/assets/147064251/1d7d1597-c982-46eb-8656-eef17162429d)
+![이미지 삭제 화면](https://github.com/shinjyun/SamSam-Final-Image/assets/147064251/9fae07b8-f067-4722-bd67-29d4f1c69ee7)
 
 - 이미지 상세 보기의 삭제 버튼을 클릭하면 alert으로 알림
