@@ -71,3 +71,10 @@
 ![이미지 삭제 화면](https://github.com/shinjyun/SamSam-Final-Image/assets/147064251/9fae07b8-f067-4722-bd67-29d4f1c69ee7)
 
 - 이미지 상세 보기의 삭제 버튼을 클릭하면 alert으로 알림
+
+<br>
+
+### 6. 페이징 처리
+![페이징 처리 화면](https://github.com/shinjyun/SamSam-Final-Image/assets/147064251/0d3cd069-fc0c-4d06-aa20-ced7a68d2b58)
+
+- 목록을 5개로 끊어서 페이징 처리 구현
