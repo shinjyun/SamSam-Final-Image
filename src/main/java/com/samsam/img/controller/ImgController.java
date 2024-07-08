@@ -65,7 +65,7 @@ public class ImgController {
 	@GetMapping("/ImgSelect")
 	public String imgSelect(@RequestParam(name = "page", defaultValue = "1") int page, @RequestParam(name = "size", defaultValue = "5") int size, Model model) {
 		
-		Page<Img> imgPage = imgService.findAllImgs(page - 1, size);
+		Page<Img> imgPage = imgService.findAllImgsDescending(page - 1, size);
 		
 		model.addAttribute("list", imgPage);
 		model.addAttribute("currentPage", page);

@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import jakarta.inject.Inject;
@@ -17,6 +18,17 @@ import com.samsam.img.jpa.repository.ImgRepository;
 public class ImgService {
 	@Inject
 	private ImgRepository imgRepository;
+	
+	public ImgService(ImgRepository imgRepository) {
+        this.imgRepository = imgRepository;
+    }
+
+    // 모든 이미지 목록을 내림차순으로 정렬하여 페이징 처리
+	@Transactional(readOnly = true)
+    public Page<Img> findAllImgsDescending(int page, int size) {
+        Pageable pageable = PageRequest.of(page, size);
+        return imgRepository.findAll(pageable);
+    }
 	
 	@Transactional
 	public Img saveImg(Img img) {
